@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HsH Toast test</title>
+
+    <link rel="stylesheet" href="/src/hshToast.css">
+    <script defer src="/src/hshToast.js"></script>
+
+    <script defer src="/test/test.js"></script>
+
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+            overflow-x: hidden;
+            
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .testToast{
+            padding: 10px;
+            border-radius: 0.3em;
+            cursor: pointer;
+        }
+
+        .testToast:active{
+            scale: 0.95;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="hsh-toast-container"></div>
+
+    <button class="testToast">Random toast</button>
+    <input type="text" name="" id="" placeholder="Toast text..." class="toastText">
+</body>
+</html>
