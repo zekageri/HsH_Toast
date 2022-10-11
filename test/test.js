@@ -1,11 +1,16 @@
+let randomToastCounter = 0;
+const testToastBtn = document.querySelector("#toastWithText");
+const testToastHTMLBtn = document.querySelector("#toastWithHtml");
+
+const toastTextEl = document.querySelector("#customText");
+const toastHTMLEl = document.querySelector("#customHTML");
+
 new hshToast({
     timeout: 10000,
     message: "Welcome. Please feel free to try HsH Toast!",
     kind: "info",
     title: "HsH Toast"
 });
-
-
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -17,13 +22,6 @@ function getRandomKind(){
     let kinds = ["warning","info","error","success"];
     return kinds[Math.floor(Math.random()*kinds.length)];
 }
-
-let randomToastCounter = 0;
-const testToastBtn = document.querySelector("#toastWithText");
-const testToastHTMLBtn = document.querySelector("#toastWithHtml");
-
-const toastTextEl = document.querySelector("#customText");
-const toastHTMLEl = document.querySelector("#customHTML");
 
 testToastBtn.addEventListener("click",function(){
     addMessage( toastTextEl.value );
@@ -40,7 +38,7 @@ function addMessage(msg){
         timeout: getRandomInt(0,10000),
         kind: getRandomKind(),
         message: text,
-        title: "System"
+        title: "HsH Toast"
     };
     randomToastCounter++;
     new hshToast(options);
