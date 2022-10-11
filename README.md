@@ -11,12 +11,15 @@ Features
  - Event emitting. Events: "start", "end", "hover", "hoverOut"
  - help() method will print the available options and events to the console.
  - Responsive
+
+Minified versions
+ - Stylesheet is 2kb
+ - Script is 6kb ( because of the svg icons )
  
 TODO
  - Wrapper class for counting and regulating the amount of toast on the screen.
  - Custom Icons
  
-
 **Usage**:
 
 
