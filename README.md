@@ -8,7 +8,7 @@ Features
  - Dismiss on click ( if set )
  - Custom timeout
  - No dependency except the stylesheet
- - Start and End event emitting
+ - Event emitting. Events: "start", "end", "hover", "hoverOut"
  - help() method will print the available options and events to the console.
  - Responsive
  
@@ -59,6 +59,14 @@ toast.on("start",function(id){
 
 toast.on("end",function(id){
   console.log("Toast dismissed with id: " id);
+}
+
+toast.on("hover",function(id){
+  console.log("Hovering over toast with id: " id);
+}
+
+toast.on("hoverOut",function(id){
+  console.log("Hovered out from toast with id: " id);
 }
 ```
 
