@@ -1,0 +1,95 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: hotpink;
+    align-self: center;
+}
+
+.toast-test-container{
+    padding: 35px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 0.3em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.toast-test-wrap {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-end;
+    max-width: 100%;
+}
+
+.toast-custom-text,.toast-custom-html{
+    padding: 10px;
+    border: none;
+    background-color: white;
+    color: dimgray;
+    font-size: 1em;
+    flex-grow: 1;
+}
+
+
+.toast-custom-text::placeholder, .toast-custom-html::placeholder{
+    font-size: 0.7em;
+}
+
+.toast-custom-text:focus-visible, .toast-custom-html:focus-visible{
+    outline: none;
+}
+
+.toast-custom-html{
+    height: 120px;
+    width: 350px;
+    max-width: 100%;
+}
+
+.spawn-toast-btn{
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    background-color: white;
+    color: dimgray;
+    border: 1px solid rgba(105, 105, 105, 0.301);
+    margin: 5px;
+}
+
+
+span.label{
+    margin-top: 10px;
+    color: cornflowerblue;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.spawn-toast-btn:hover{
+    scale: 1.1;
+}
+
+.spawn-toast-btn:active{
+    scale: 0.95;
+}
+
+
+.toastLi{
+    padding: 10px;
+    margin: 0px;
+}

@@ -9,40 +9,39 @@
     <link rel="stylesheet" href="/src/hshToast.css">
     <script defer src="/src/hshToast.js"></script>
 
+    <link rel="stylesheet" href="/test/test.css">
     <script defer src="/test/test.js"></script>
-
-    <style>
-        body{
-            padding: 0px;
-            margin: 0px;
-            overflow-x: hidden;
-            
-            height: 100vh;
-
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .testToast{
-            padding: 10px;
-            border-radius: 0.3em;
-            cursor: pointer;
-        }
-
-        .testToast:active{
-            scale: 0.95;
-        }
-
-    </style>
 </head>
 <body>
 
     <div class="hsh-toast-container"></div>
 
-    <button class="testToast">Random toast</button>
-    <input type="text" name="" id="" placeholder="Toast text..." class="toastText">
+    
+    <div class="toast-test-container">
+
+        <h1>HsH Toast test</h1>
+
+        <span class="label">Custom text</span>
+        <div class="toast-test-wrap">
+            <input type="text" name="customText" placeholder="Write a custom text..." id="customText" class="toast-custom-text">
+            <button class="spawn-toast-btn" id="toastWithText">TRY ME</button>
+        </div>
+
+        <span class="label">Custom html</span>
+        <div class="toast-test-wrap">
+            <textarea type="text" name="customHTML" placeholder="Write a custom html..." id="customHTML" class="toast-custom-html">
+<ul class="toastLi"> 
+
+    <li> This is a LI elem (1) </li>
+
+    <li> This is a LI elem (2) </li>
+
+</ul>
+            </textarea>
+            <button class="spawn-toast-btn" id="toastWithHtml">TRY ME</button>
+        </div>
+
+    </div>
+
 </body>
 </html>

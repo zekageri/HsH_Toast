@@ -1,39 +1,9 @@
 new hshToast({
-    timeout: 5000,
-    message: "This is a test toast with a long running text. It can be whatever.",
-    kind: "error",
-    title: "System"
+    timeout: 10000,
+    message: "Welcome. Please feel free to try HsH Toast!",
+    kind: "info",
+    title: "HsH Toast"
 });
-
-const popInTime = 500;
-setTimeout(() => {
-    new hshToast({
-        timeout: 5000000,
-        message: "This is a test toast!",
-        kind: "info",
-        title: "System"
-    });
-
-    setTimeout(() => {
-        new hshToast({
-            timeout: 5000,
-            message: "This is a test toast!",
-            kind: "warning",
-            title: "System"
-        });
-
-        setTimeout(() => {
-            new hshToast({
-                timeout: 5000,
-                message: "This is a different length text test toast!",
-                kind: "success",
-                title: "System"
-            });
-        }, popInTime);
-
-    }, popInTime);
-    
-}, popInTime);
 
 
 
@@ -49,13 +19,23 @@ function getRandomKind(){
 }
 
 let randomToastCounter = 0;
-const testToastBtn = document.querySelector(".testToast");
-const toastTextEl = document.querySelector(".toastText");
+const testToastBtn = document.querySelector("#toastWithText");
+const testToastHTMLBtn = document.querySelector("#toastWithHtml");
+
+const toastTextEl = document.querySelector("#customText");
+const toastHTMLEl = document.querySelector("#customHTML");
+
 testToastBtn.addEventListener("click",function(){
+    addMessage( toastTextEl.value );
+});
+testToastHTMLBtn.addEventListener("click",function(){
+    addMessage( toastHTMLEl.value );
+});
+
+
+function addMessage(msg){
     let text = `Random toast ${randomToastCounter}`;
-    if( toastTextEl.value ){
-        text = toastTextEl.value;
-    }
+    if( msg ){ text = msg; }
     let options = {
         timeout: getRandomInt(0,10000),
         kind: getRandomKind(),
@@ -64,7 +44,7 @@ testToastBtn.addEventListener("click",function(){
     };
     randomToastCounter++;
     new hshToast(options);
-});
+}
 
 
 
